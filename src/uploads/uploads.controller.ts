@@ -5,6 +5,7 @@ import {
   UploadedFile,
   HttpException,
   HttpStatus,
+  Body,
 } from '@nestjs/common';
 import {
   FileInterceptor,
@@ -56,7 +57,5 @@ export class UploadsController {
     }
     return this.uploadsService.uploadSingleFile(file);
   }
-
-
 
 }

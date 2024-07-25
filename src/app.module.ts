@@ -5,6 +5,7 @@ import { ConfigModule } from '@nestjs/config';
 import { UploadsModule } from './uploads/uploads.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ModelModule } from './model/model.module';
+import { AzureAiVideoIndexerModule } from './azure-ai-video-indexer/azure-ai-video-indexer.module';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { ModelModule } from './model/model.module';
     UploadsModule,
     MongooseModule.forRoot(process.env.DB_URI),
     ModelModule,
+    AzureAiVideoIndexerModule,
   ],
   controllers: [AppController],
   providers: [AppService],
